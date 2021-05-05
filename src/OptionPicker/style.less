@@ -1,0 +1,21 @@
+.option-picker {
+  max-height: 90%;
+
+  &.flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-search-list {
+    flex: 1;
+    overflow: auto;
+  }
+
+  > .van-picker__toolbar {
+    flex-shrink: 0;
+  }
+
+  > .van-divider {
+    margin: 0;
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "vant-components",
+  "version": "0.0.1",
+  "description": "基于vant封装一些常用的业务组件",
+  "main": "src/index.js",
+  "module": "dist/esm/index.js",
+  "jsdelivr": "dist/index.umd.min.js",
+  "author": "toesbieya",
+  "license": "MIT",
+  "homepage": "https://github.com/toesbieya/vant-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toesbieya/vant-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toesbieya/vant-components/issues"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:example": "vue-cli-service build",
+    "build:lib-umd": "vue-cli-service build --target lib --no-clean --formats umd-min --name index build/umd.js",
+    "build:lib-esm": "node build/esm.js",
+    "build:css": "node build/css.js",
+    "dist": "npm run build:lib-umd && npm run build:lib-esm && npm run build:css"
+  },
+  "peerDependencies": {
+    "vant": "^2.12.15",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.0-alpha.5",
+    "@vue/cli-service": "^5.0.0-alpha.5",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
+    "vant": "^2.12.15",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "Chrome > 80"
+  ]
+}
