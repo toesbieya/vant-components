@@ -147,6 +147,9 @@ export default {
           <DatePicker
               ref="picker"
               value={this.value}
+              type={this.dateType}
+              min-date={this.minDate}
+              max-date={this.maxDate}
               title={this.pickerTitle || this.placeholder}
               on-change={this.onPickerChange}
           />
