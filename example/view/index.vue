@@ -6,12 +6,16 @@
     </h1>
     <h2 class="demo-home__desc">基于vant封装的业务组件</h2>
 
+    <round-link title="AmountInput 金额输入框" to="/amount-input"/>
     <round-link title="Avatar 头像" to="/avatar"/>
     <round-link title="DropdownItem 带加载和空状态的下拉菜单" to="/dropdown-item"/>
     <round-link title="OptionPicker 弹出选项选择器" to="/option-picker"/>
     <round-link title="DatePicker 弹出日期选择器" to="/date-picker"/>
     <round-link title="PickerField 带选择器的表单项" to="/picker-field"/>
     <round-link title="SearchList 下拉刷新 + 无限滚动" to="/search-list"/>
+    <round-link title="ImageUpload 图片上传" to="/image-upload"/>
+    <round-link title="FileUpload 文件上传" to="/file-upload"/>
+    <round-link title="Table 表格" to="/table"/>
 
   </div>
 </template>
