@@ -172,15 +172,18 @@ export default {
         },
         {immediate: true}
     )
+
+    // 避免没有下边框
+    const parent = this.$el.parentNode
+    const vanField = this.$el.children[0]
+    parent.replaceChild(vanField, this.$el)
   },
 
   render(h) {
     const field = this.renderField(h)
 
     // 设置了readonly时，不需要渲染选择器
-    return this.readonly
-        ? field
-        : h('div', [field, this.renderPicker(h)])
+    return h('div', [field, !this.readonly && this.renderPicker(h)])
   }
 }
 </script>
