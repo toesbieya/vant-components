@@ -1,0 +1,102 @@
+@import "~vant/lib/style/var.less";
+
+.fab {
+  position: relative;
+  z-index: 2;
+  line-height: 1.5;
+
+  &.show {
+    .fab-trigger .van-icon {
+      transform: rotate(135deg);
+    }
+
+    .fab-content {
+      opacity: 1;
+      transform: scale(1) translate3d(0, 0, 0);
+      pointer-events: all;
+    }
+  }
+
+  &-trigger, &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @white;
+    border-radius: 50%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+  }
+
+  &-trigger {
+    width: 45px;
+    height: 45px;
+    background-color: @blue;
+
+    .van-icon {
+      transition: transform .4s;
+    }
+  }
+
+  &-item {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+
+    &.blue {
+      background-color: @blue;
+    }
+
+    &.red {
+      background-color: @red;
+    }
+
+    &.orange {
+      background-color: @orange-dark;
+    }
+
+    &__label {
+      position: absolute;
+      background-color: @gray-6;
+      border-radius: 4px;
+      padding: 0 8px;
+      font-size: @font-size-xs;
+
+      top: 50%;
+
+      &.left {
+        left: -12px;
+        transform: translate(-100%, -50%);
+      }
+
+      &.right {
+        right: -12px;
+        transform: translate(100%, -50%);
+      }
+    }
+  }
+
+  &-content {
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.18s ease-in, opacity 0.18s ease-in;
+    pointer-events: none;
+    display: flex;
+    padding: 3px;
+
+    &.up {
+      flex-direction: column;
+      transform-origin: 50% 100%;
+      transform: scale(.2) translateY(62px);
+      bottom: 100%;
+      margin-bottom: 9px;
+    }
+
+    &.down {
+      transform-origin: 50% 0;
+      transform: scale(0.4) translateY(-62px);
+      top: 100%;
+      margin-top: 9px;
+      flex-direction: column;
+    }
+  }
+}

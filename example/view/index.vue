@@ -13,9 +13,7 @@
     <round-link title="DatePicker 弹出日期选择器" to="/date-picker"/>
     <round-link title="PickerField 带选择器的表单项" to="/picker-field"/>
     <round-link title="SearchList 下拉刷新 + 无限滚动" to="/search-list"/>
-    <round-link title="ImageUpload 图片上传" to="/image-upload"/>
-    <round-link title="FileUpload 文件上传" to="/file-upload"/>
-    <round-link title="Table 表格" to="/table"/>
+    <round-link title="Fab 浮动按钮" to="/fab"/>
 
   </div>
 </template>

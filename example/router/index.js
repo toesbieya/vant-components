@@ -7,6 +7,7 @@ import SearchList from '@example/view/search-list'
 import OptionPicker from '@example/view/option-picker'
 import DatePicker from '@example/view/date-picker'
 import PickerField from '@example/view/picker-field'
+import Fab from '@example/view/fab'
 
 export default new Router({
   base: process.env.BASE_URL,
@@ -19,6 +20,7 @@ export default new Router({
     {path: '/search-list', component: SearchList},
     {path: '/option-picker', component: OptionPicker},
     {path: '/date-picker', component: DatePicker},
-    {path: '/picker-field', component: PickerField}
+    {path: '/picker-field', component: PickerField},
+    {path: '/fab', component: Fab},
   ]
 })
