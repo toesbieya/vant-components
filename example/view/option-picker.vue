@@ -21,6 +21,10 @@
     <h2 class="demo-desc">分页搜索</h2>
     <van-cell title="商品" :value="cellValue5()" is-link @click="open(5)"/>
     <option-picker ref="picker5" v-model="value1" show-toolbar searchable placeholder="输入商品名称" :api="api"/>
+
+    <h2 class="demo-desc">取消按钮</h2>
+    <van-cell title="商品" :value="cellValue1" is-link @click="open(6)"/>
+    <option-picker ref="picker6" v-model="value1" :options="options" cancelable/>
   </div>
 </template>
 

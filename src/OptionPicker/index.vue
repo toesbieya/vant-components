@@ -22,8 +22,12 @@ export default {
     multiple: Boolean,
     // 是否显示顶部栏（同van-picker），开启后会以圆角显示弹出层
     showToolbar: Boolean,
-    // 顶部栏标题（同van-picker）
+    // 顶部栏标题（同van-picker），仅在启用showToolbar时有效
     title: String,
+    // 是否显示底部的取消按钮
+    cancelable: Boolean,
+    // 取消按钮文字
+    cancelText: {String, default: '取消'},
 
     /*搜索分页特有属性*/
     // 是否开启搜索分页
@@ -64,7 +68,7 @@ export default {
     popupClass() {
       return {
         'option-picker': true,
-        'flex': this.searchable
+        'flex': this.searchable || this.cancelable
       }
     },
     /*
@@ -208,6 +212,12 @@ export default {
         <Divider/>
       ]
     },
+    renderBottomCancelBtn() {
+      return this.cancelable && [
+        <div class="van-action-sheet__gap"/>,
+        <button type="button" class="van-action-sheet__cancel" on-click={this.close}>取消</button>
+      ]
+    },
     renderChildren() {
       // 未开启搜索分页
       if (!this.searchable) {
@@ -267,6 +277,7 @@ export default {
         >
           {this.renderToolbar()}
           {this.renderChildren()}
+          {this.renderBottomCancelBtn()}
         </Popup>
     )
   }
